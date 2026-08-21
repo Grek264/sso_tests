@@ -1,19 +1,21 @@
+import os
+
+
 class TestData:
-    # Данные для авторизации (замените на ваши тестовые)
-    VALID_PHONE = "+79261234567"
-    VALID_EMAIL = "test@example.com"
-    VALID_LOGIN = "testuser"
-    VALID_LS = "1234567890"
-    VALID_PASSWORD = "ValidPass123"
-    WRONG_PASSWORD = "WrongPass"
+    """Test data loaded from environment variables."""
 
-    # Данные для регистрации (со скриншота)
-    FIRST_NAME = "Грек"
-    LAST_NAME = "Тестюзер"
-    REGION = "Москва"
-    NEW_EMAIL = "grishamakhin@gmail.com"  # замените на уникальный при прогоне
-    NEW_PASSWORD = "Test_user1234"
+    VALID_PHONE = os.getenv("RT_VALID_PHONE", "")
+    VALID_EMAIL = os.getenv("RT_VALID_EMAIL", "")
+    VALID_LOGIN = os.getenv("RT_VALID_LOGIN", "")
+    VALID_LS = os.getenv("RT_VALID_LS", "")
+    VALID_PASSWORD = os.getenv("RT_VALID_PASSWORD", "")
+    WRONG_PASSWORD = os.getenv("RT_WRONG_PASSWORD", "incorrect-password")
 
-    # Для восстановления (используем те же контакты)
+    FIRST_NAME = os.getenv("RT_FIRST_NAME", "Тест")
+    LAST_NAME = os.getenv("RT_LAST_NAME", "Пользователь")
+    REGION = os.getenv("RT_REGION", "Москва")
+    NEW_EMAIL = os.getenv("RT_NEW_EMAIL", "")
+    NEW_PASSWORD = os.getenv("RT_NEW_PASSWORD", "")
+
     RECOVERY_PHONE = VALID_PHONE
     RECOVERY_EMAIL = VALID_EMAIL
