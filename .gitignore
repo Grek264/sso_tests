@@ -1,0 +1,11 @@
+.env
+.venv/
+venv/
+Scripts/
+pyvenv.cfg
+CACHEDIR.TAG
+.idea/
+__pycache__/
+.pytest_cache/
+allure-results/
+*.py[cod]
